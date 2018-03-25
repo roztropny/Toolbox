@@ -8,7 +8,7 @@
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bwieckowski.toolbox.Controller">
    <children>
       <Button fx:id="argreplace" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="Arg -&gt; SQL" />
-      <Button fx:id="php" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="PHP &lt;-&gt; SQL" />
+      <Button fx:id="phptosql" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="PHP &lt;-&gt; SQL" />
       <Button fx:id="strreplace" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="StrReplace" />
       <Button fx:id="ocr" mnemonicParsing="false" prefWidth="200.0" text="IMG -&gt; TXT" />
       <CheckBox alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Zapis historii do pliku" />

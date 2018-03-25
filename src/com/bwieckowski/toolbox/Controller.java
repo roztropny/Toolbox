@@ -21,7 +21,7 @@ public class Controller {
     @FXML
     private TextField input1, input2;
     @FXML
-    private TextArea args, query, input3, output;
+    private TextArea args, query, input3, output, php, sql;
 
     public Controller() {
         stringReplace = new StringReplace();
@@ -39,8 +39,8 @@ public class Controller {
                 scene = FXMLLoader.load(getClass().getResource("Menu.fxml"));
                 break;
 
-            case "Button[id=php styleClass=button]'PHP <-> SQL'":
-                scene = FXMLLoader.load(getClass().getResource("Arg.fxml"));
+            case "Button[id=phptosql, styleClass=button]'PHP <-> SQL'":
+                scene = FXMLLoader.load(getClass().getResource("PhpToSql.fxml"));
                 break;
             case "Button[id=argreplace, styleClass=button]'Arg -> SQL'":
                 scene = FXMLLoader.load(getClass().getResource("Arg.fxml"));
@@ -69,6 +69,14 @@ public class Controller {
         output.setText(StringReplace.argReplace(args.getText(), query.getText()));
     }
 
+    @FXML
+    private void phpToSqlConvert(){
+        sql.setText(StringReplace.strReplace("\\\"", "\"", php.getText()));
+    }
 
+    @FXML
+    private void sqlToPhpConvert(){
+        php.setText(StringReplace.strReplace("\"", "\\\"", sql.getText()));
+    }
 
 }

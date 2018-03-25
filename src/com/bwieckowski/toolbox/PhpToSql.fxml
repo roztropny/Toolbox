@@ -12,12 +12,12 @@
       <VBox spacing="10.0">
          <children>
             <Button fx:id="back" mnemonicParsing="false" onAction="#switchScene" text="&lt;-" />
-            <Button fx:id="convert" mnemonicParsing="false" onAction="#strConvert" text="PHP -&gt; SQL">
+            <Button fx:id="convert" mnemonicParsing="false" onAction="#phpToSqlConvert" text="PHP -&gt; SQL">
                <VBox.margin>
                   <Insets top="40.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="convert1" mnemonicParsing="false" onAction="#strConvert" text="PHP &lt;- SQL">
+            <Button fx:id="convert1" mnemonicParsing="false" onAction="#sqlToPhpConvert" text="SQL -&gt; PHP">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
