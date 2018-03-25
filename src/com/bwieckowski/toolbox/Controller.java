@@ -38,6 +38,10 @@ public class Controller {
             case "Button[id=back, styleClass=button]'<-'":
                 scene = FXMLLoader.load(getClass().getResource("Menu.fxml"));
                 break;
+
+            case "Button[id=php styleClass=button]'PHP <-> SQL'":
+                scene = FXMLLoader.load(getClass().getResource("Arg.fxml"));
+                break;
             case "Button[id=argreplace, styleClass=button]'Arg -> SQL'":
                 scene = FXMLLoader.load(getClass().getResource("Arg.fxml"));
                 break;

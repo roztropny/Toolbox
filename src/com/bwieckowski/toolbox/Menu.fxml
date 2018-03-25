@@ -2,35 +2,16 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bwieckowski.toolbox.Controller">
    <children>
-      <Button fx:id="argreplace" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="Arg -&gt; SQL">
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
-      </Button>
+      <Button fx:id="argreplace" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="Arg -&gt; SQL" />
+      <Button fx:id="php" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="PHP &lt;-&gt; SQL" />
       <Button fx:id="strreplace" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="StrReplace" />
       <Button fx:id="ocr" mnemonicParsing="false" prefWidth="200.0" text="IMG -&gt; TXT" />
-      <GridPane>
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="75.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="125.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label prefHeight="17.0" prefWidth="125.0" text="Zapis historii do pliku" GridPane.columnIndex="1" />
-            <ToggleButton mnemonicParsing="false" />
-         </children>
-      </GridPane>
+      <CheckBox alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Zapis historii do pliku" />
       <Button fx:id="history" mnemonicParsing="false" prefWidth="200.0" text="Historia" />
    </children>
    <padding>
