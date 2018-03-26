@@ -82,7 +82,7 @@ public class COCR extends Controller implements Initializable{
         try {
             output.setText(ocr.doOCR(filefield.getText(), dirfield.getText()));
         } catch (TesseractException e) {
-            output.setText(e.getMessage());
+            output.setText(e.getStackTrace().toString());
         }
     }
 }
