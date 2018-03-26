@@ -1,8 +1,5 @@
 package com.bwieckowski.toolbox;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class StringReplace{
 
     private static String replace(String[] oldstring, String[] newstring, String input){

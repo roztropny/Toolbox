@@ -10,9 +10,9 @@
       <Button fx:id="argreplace" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="Arg -&gt; SQL" />
       <Button fx:id="phptosql" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="PHP &lt;-&gt; SQL" />
       <Button fx:id="strreplace" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="StrReplace" />
-      <Button fx:id="ocr" mnemonicParsing="false" prefWidth="200.0" text="IMG -&gt; TXT" />
+      <Button fx:id="ocr" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="IMG -&gt; TXT" />
       <CheckBox alignment="CENTER" mnemonicParsing="false" prefWidth="200.0" text="Zapis historii do pliku" />
-      <Button fx:id="history" mnemonicParsing="false" prefWidth="200.0" text="Historia" />
+      <Button fx:id="history" mnemonicParsing="false" onAction="#switchScene" prefWidth="200.0" text="Historia" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

@@ -10,35 +10,30 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import net.sourceforge.tess4j.TesseractException;
 
+import java.io.File;
 import java.io.IOException;
 
 public class Controller {
-    private StringReplace stringReplace;
 
     @FXML
     private TextField input1, input2;
     @FXML
     private TextArea args, query, input3, output, php, sql;
 
-    public Controller() {
-        stringReplace = new StringReplace();
-    }
-
     @FXML
-    private void switchScene(ActionEvent event) throws IOException {
-        System.out.println(event.getSource().toString());
+    protected void switchScene(ActionEvent event) throws IOException {
         String choice = event.getSource().toString();
-        //label.setText("Hello World!");
-        //Here I want to swap the screen!
+        System.out.println(choice);
         Parent scene = null;
         switch(choice){
             case "Button[id=back, styleClass=button]'<-'":
                 scene = FXMLLoader.load(getClass().getResource("Menu.fxml"));
                 break;
-
             case "Button[id=phptosql, styleClass=button]'PHP <-> SQL'":
                 scene = FXMLLoader.load(getClass().getResource("PhpToSql.fxml"));
                 break;
@@ -48,13 +43,14 @@ public class Controller {
             case "Button[id=strreplace, styleClass=button]'StrReplace'":
                 scene = FXMLLoader.load(getClass().getResource("StrReplace.fxml"));
                 break;
+            case "Button[id=ocr, styleClass=button]'IMG -> TXT'":
+                scene = FXMLLoader.load(getClass().getResource("ImgToTxt.fxml"));
+                break;
+            default:
+                System.out.println(choice);
         }
 
         Stage stageTheEventSourceNodeBelongs = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        // OR
-        //Stage stageTheLabelBelongs = (Stage) label.getScene().getWindow();
-        // these two of them return the same stage
-        // Swap screen
         stageTheEventSourceNodeBelongs.setScene(new Scene(scene));
         stageTheEventSourceNodeBelongs.centerOnScreen();
     }
