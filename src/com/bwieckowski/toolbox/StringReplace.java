@@ -28,9 +28,9 @@ public class StringReplace{
             String[] temp = argsvalues[i].split("=");
             args[i] = ":\"" + temp[0]+"\"";
             if(1 >= temp.length)
-                values[i] = "";
+                values[i] = "''";
             else
-                values[i] = temp[1];
+                values[i] = "'"+temp[1]+"'";
         }
         //System.out.println(Arrays.toString(args));\
 
