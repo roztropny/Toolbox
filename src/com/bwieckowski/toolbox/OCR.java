@@ -18,6 +18,11 @@ public class OCR {
         Tesseract tesseract = new Tesseract();
         tesseract.setDatapath(tesseractPath);
         //tesseract.setLanguage();
-        return tesseract.doOCR(new File(inputFilePath));
+        File file = new File(inputFilePath);
+        if(file.canRead()) {
+            return tesseract.doOCR(file);
+        } else{
+            return "Permission denied";
+        }
     }
 }
